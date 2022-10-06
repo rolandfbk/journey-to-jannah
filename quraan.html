@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey To Jannah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/templatemo-ocean-vibes.css">
+<!--
+
+TemplateMo 554 Ocean Vibes
+
+https://templatemo.com/tm-554-ocean-vibes
+
+-->
+</head>
+<body>
+    <div id="about" class="popup mfp-with-anim tm-bg-gray">
+		<a href="index.html" class="tm-close-popup">
+			Home
+		</a>
+		<h2 class="tm-color-primary tm-about-col tm-mb-40 tm-page-title">Khatm</h2>
+		<div class="tm-row tm-about-row">
+			<section id="create-khatm-section">
+				<div class="link-new-khatm">
+					<a href="#" id="link-mykhatm">MY KHATM</a>
+				</div>
+				<div class="tm-col tm-about-col">
+					<img src="img/about.jpg" alt="Image" class="tm-mb-30">
+					<p class="tm-mb-40">
+						Performing a <span class="tm-color-primary">Quraan Khatm</span> with a group or individually?
+					</p>
+					<p class="tm-mb-40">
+						Manage and track the para/juz allocations easily with this simple tool and avoid those messy copy paste Whatsapp lists.
+					</p>
+				</div>
+				<div class="tm-col tm-about-col">
+					<div class="tm-row tm-contact-row">
+						<div class="tm-col tm-contact-col">
+							<form id="create-khatm-form" class="tm-contact-form">
+								<div class="form-group tm-text-center">
+									<input type="text" id="khatm-description" name="khatm" class="form-control rounded-0" placeholder="Khatm description" required />
+								</div>
+								<div class="form-group tm-text-center">
+									<button id="create-khatm" type="submit" class="tm-btn tm-btn-primary">Create Khatm</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="title-khatm-section">
+				<div class="link-new-khatm">
+					<a href="#" id="link-new-khatm">NEW</a>
+				</div>
+				<div class="title-khatm-div">
+					<div class="tm-col tm-about-col">
+						<p class="tm-mb-40">
+							<span class="khatm-title-main">
+								<span>
+									<span class="tm-color-green" id="khatm-title">Khatm title</span> <br>
+									<span id="khatm-time"></span> <br><br>
+								</span>
+								<span class="khatm-icons">
+									<a><i class="far fa-copy"></i></a>
+									<a><i class="far fa-edit"></i></a>
+									<a><i class="far fa-trash-alt"></i></a>
+								</span>
+							</span>
+
+							<span>Read <span class="khatm-read" id="khatm-read"></span><span class="space"></span> || <span
+									class="space"></span>Allocated <span class="khatm-allocated" id="khatm-allocated"></span></span> <br><br>
+							<button type="button" class="whatsapp-btn"><img class="whatsapp-img" src="img/whatsapp.png" alt="whatsapp"> Share this Khatm</button>
+						</p>
+					</div>
+				</div>
+			</section>
+			<section id="set-khatm-section">
+				<div class="tm-col tm-about-col">
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #DC143C; color: #fff;"><b>1</b></div> <div style="padding-left:10px">Alif Lam Meem</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form1" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input1" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form1-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input1-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read1" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove1" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form1-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input1-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread1" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove1-1" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #0000FF; color: #fff;"><b>2</b></div> <div style="padding-left:10px">Sayaqool</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form2" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input2" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form2-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input2-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read2" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove2" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form2-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input2-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread2" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove2-2" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #B8860B; color: #fff;"><b>3</b></div> <div style="padding-left:10px">Tilkal Rusull</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form3" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input3" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form3-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input3-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read3" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove3" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form3-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input3-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread3" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove3-3" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #FF8C00; color: #fff;"><b>4</b></div> <div style="padding-left:10px">Lan Tana Loo</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form4" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input4" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form4-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input4-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read4" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove4" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form4-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input4-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread4" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove4-4" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #9400D3; color: #fff;"><b>5</b></div> <div style="padding-left:10px">Wal Mohsanat</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form5" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input5" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form5-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input5-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read5" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove5" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form5-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input5-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread5" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove5-5" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #FF1493; color: #fff;"><b>6</b></div> <div style="padding-left:10px">La Yuhibbullah</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form6" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input6" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form6-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input6-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read6" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove6" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form6-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input6-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread6" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove6-6" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #228B22; color: #fff;"><b>7</b></div> <div style="padding-left:10px">Wa Iza Samiu</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form7" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input7" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form7-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input7-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read7" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove7" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form7-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input7-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread7" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove7-7" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #DAA520; color: #fff;"><b>8</b></div> <div style="padding-left:10px">Wa Lau Annana</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form8" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input8" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form8-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input8-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read8" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove8" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form8-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input8-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread8" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove8-8" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #4B0082; color: #fff;"><b>9</b></div> <div style="padding-left:10px">Qalal Malao</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form9" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input9" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form9-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input9-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read9" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove9" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form9-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input9-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread9" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove9-9" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #FF00FF; color: #fff;"><b>10</b></div> <div style="padding-left:10px">Wa A'lamu</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form10" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input10" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form10-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input10-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read10" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove10" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form10-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input10-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread10" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove10-10" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #66CDAA; color: #fff;"><b>11</b></div> <div style="padding-left:10px">Yatazeroon</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form11" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input11" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form11-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input11-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read11" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove11" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form11-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input11-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread11" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove11-11" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #808000; color: #fff;"><b>12</b></div> <div style="padding-left:10px">Wa Mamin Da'abat</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form12" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input12" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form12-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input12-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read12" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove12" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form12-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input12-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread12" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove12-12" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #FF4500; color: #fff;"><b>13</b></div> <div style="padding-left:10px">Wa Ma Ubrioo</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form13" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input13" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form13-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input13-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read13" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove13" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form13-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input13-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread13" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove13-13" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #FFA500; color: #fff;"><b>14</b></div> <div style="padding-left:10px">Rubama</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form14" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input14" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form14-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input14-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read14" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove14" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form14-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input14-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread14" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove14-14" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #800080; color: #fff;"><b>15</b></div> <div style="padding-left:10px">Subhanallazi</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form15" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input15" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form15-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input15-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read15" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove15" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form15-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input15-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread15" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove15-15" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #8B4513; color: #fff;"><b>16</b></div> <div style="padding-left:10px">Qal Alam</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form16" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input16" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form16-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input16-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read16" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove16" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form16-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input16-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread16" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove16-16" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #FA8072; color: #fff;"><b>17</b></div> <div style="padding-left:10px">Aqtarabo</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form17" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input17" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form17-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input17-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read17" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove17" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form17-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input17-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread17" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove17-17" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #F4A460; color: #fff;"><b>18</b></div> <div style="padding-left:10px">Qadd Aflaha</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form18" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input18" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form18-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input18-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read18" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove18" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form18-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input18-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread18" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove18-18" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #2E8B57; color: #fff;"><b>19</b></div> <div style="padding-left:10px">Wa Qalallazina</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form19" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input19" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form19-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input19-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read19" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove19" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form19-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input19-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread19" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove19-19" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #FF6347; color: #fff;"><b>20</b></div> <div style="padding-left:10px">A'man Khalaq</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form20" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input20" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form20-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input20-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read20" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove20" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form20-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input20-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread20" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove20-20" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #008080; color: #fff;"><b>21</b></div> <div style="padding-left:10px">Utlu Ma Oohi</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form21" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input21" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form21-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input21-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read21" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove21" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form21-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input21-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread21" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove21-21" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #EE82EE; color: #fff;"><b>22</b></div> <div style="padding-left:10px">Wa Manyaqnut</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form22" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input22" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form22-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input22-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read22" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove22" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form22-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input22-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread22" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove22-22" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #D8BFD8; color: #fff;"><b>23</b></div> <div style="padding-left:10px">Wa Mali</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form23" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input23" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form23-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input23-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read23" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove23" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form23-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input23-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread23" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove23-23" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #9ACD32; color: #fff;"><b>24</b></div> <div style="padding-left:10px">Faman Azlam</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form24" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input24" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form24-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input24-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read24" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove24" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form24-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input24-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread24" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove24-24" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #8B4513; color: #fff;"><b>25</b></div> <div style="padding-left:10px">Elahe Yuruddo</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form25" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input25" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form25-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input25-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read25" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove25" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form25-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input25-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread25" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove25-25" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #66CDAA; color: #fff;"><b>26</b></div> <div style="padding-left:10px">Ha'a Meem</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form26" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input26" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form26-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input26-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read26" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove26" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form26-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input26-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread26" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove26-26" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #CD5C5C; color: #fff;"><b>27</b></div> <div style="padding-left:10px">Qala Fama Khatbukum</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form27" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input27" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form27-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input27-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read27" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove27" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form27-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input27-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread27" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove27-27" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #FF69B4; color: #fff;"><b>28</b></div> <div style="padding-left:10px">Qadd Sami Allah</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form28" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input28" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form28-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input28-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read28" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove28" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form28-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input28-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread28" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove28-28" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #FFD700; color: #fff;"><b>29</b></div> <div style="padding-left:10px">Tabarakallazi</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form29" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input29" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form29-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input29-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read29" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove29" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form29-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input29-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread29" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove29-29" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"><div style="width:50px; text-align:center; background-color: #BDB76B; color: #fff;"><b>30</b></div> <div style="padding-left:10px">Amma Yatasa'aloon</div></div>
+							<div class="khatm-list-details">
+								<form id="khatm-list-form30" method="POST" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input30" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<button id="update-khatm" type="submit" class="tm-btn tm-btn-primary btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Allocate</button>
+								</form>
+								<div id="khatm-list-form30-allocated" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input30-allocated" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-read30" type="button" class="tm-btn tm-btn-success btn-font"><i class="far fa-check-circle" style="font-size:25px;color:#fff"></i> Read</button>
+									<button id="update-khatm-remove30" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+								<div id="khatm-list-form30-read" class="flex-form tm-contact-form">
+									<input type="text" id="khatm-list-input30-read" name="khatm" class="form-control rounded-0" disabled />
+									<button id="update-khatm-unread30" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Unread</button>
+									<button id="update-khatm-remove30-30" type="button" class="tm-btn tm-btn-danger btn-font"><i class="far fa-times-circle" style="font-size:25px;color:#fff"></i> Remove</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+	</div>
+
+    <footer class="tm-footer">
+        <span>Copyright &copy; 2020 Destination Jannah</span>
+        <span>Web Designed by Sh@rifa</span>
+</footer>
+		<script src="js/quraan.js"></script>
+		<script src="js/quraan-forms.js"></script>
+		<script src="js/quraan-forms-read.js"></script>
+		<script src="js/quraan-forms-unread.js"></script>
+		<script src="js/quraan-forms-remove.js"></script>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+	
+	
+</body>
+</html>
