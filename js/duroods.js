@@ -214,6 +214,30 @@ const update_duroods = async (id_date, reader, counter) => {
   return finalResponse;
 }
 
+const delete_duroods = async (id_date) => {
+  const url = 'http://localhost/journey-to-jannah/php/duroods-delete.php';
+  const myHeaders = new Headers();
+  myHeaders.append('Content-Type', 'application/json');
+
+  const raw = JSON.stringify({
+    id_date: id_date,
+  });
+
+  const requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow',
+  };
+
+  const response = await fetch(url, requestOptions);
+  const myResult = await response.text();
+  // console.log(myResult);
+  const finalResponse = JSON.parse(myResult);
+
+  return finalResponse;
+}
+
 
 const storageKhatm = JSON.parse(localStorage.getItem('jannah_duroods'));
 if(storageKhatm) {
@@ -280,7 +304,41 @@ if(storageKhatm) {
             }
           },
         );
-      }); 
+      });
+
+      const deleteDuroodsForm = document.getElementById('duroods_delete');
+      deleteDuroodsForm.addEventListener('click', (e) => {
+        e.preventDefault();
+        swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this duroods!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if(willDelete) {
+            const duroodsRemove = delete_duroods(storageKhatm.mydateKhatm);
+            duroodsRemove.then(
+              (value) => {
+                if(value) {
+                  localStorage.removeItem('jannah_duroods');
+                  document.getElementById('create-khatm-section').style.display = 'block';
+                  document.getElementById('title-khatm-section').style.display = 'none';
+                  document.getElementById('set-khatm-section').style.display = 'none';
+                  swal("Duroods has been deleted!", {
+                    icon: "success",
+                  });
+                } else {
+                  alert('Fail to delete duroods! Please try again...');
+                }
+              },
+            );
+          } else {
+            swal("This duroods is safe!");
+          }
+        }); 
+      });
     },
   );
 
@@ -363,6 +421,40 @@ if(storageKhatm) {
                     }
                   },
                 );
+              });
+
+              const deleteDuroodsForm = document.getElementById('duroods_delete');
+              deleteDuroodsForm.addEventListener('click', (e) => {
+                e.preventDefault();
+                swal({
+                  title: "Are you sure?",
+                  text: "Once deleted, you will not be able to recover this duroods!",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                .then((willDelete) => {
+                  if(willDelete) {
+                    const duroodsRemove = delete_duroods(storageKhatm.mydateKhatm);
+                    duroodsRemove.then(
+                      (value) => {
+                        if(value) {
+                          localStorage.removeItem('jannah_duroods');
+                          document.getElementById('create-khatm-section').style.display = 'block';
+                          document.getElementById('title-khatm-section').style.display = 'none';
+                          document.getElementById('set-khatm-section').style.display = 'none';
+                          swal("Duroods has been deleted!", {
+                            icon: "success",
+                          });
+                        } else {
+                          alert('Fail to delete duroods! Please try again...');
+                        }
+                      },
+                    );
+                  } else {
+                    swal("This duroods is safe!");
+                  }
+                }); 
               });
             },
           );
@@ -549,7 +641,41 @@ if(storageKhatm) {
                     }
                   },
                 );
-              }); 
+              });
+              
+              const deleteDuroodsForm = document.getElementById('duroods_delete');
+              deleteDuroodsForm.addEventListener('click', (e) => {
+                e.preventDefault();
+                swal({
+                  title: "Are you sure?",
+                  text: "Once deleted, you will not be able to recover this duroods!",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                .then((willDelete) => {
+                  if(willDelete) {
+                    const duroodsRemove = delete_duroods(storageKhatm.mydateKhatm);
+                    duroodsRemove.then(
+                      (value) => {
+                        if(value) {
+                          localStorage.removeItem('jannah_duroods');
+                          document.getElementById('create-khatm-section').style.display = 'block';
+                          document.getElementById('title-khatm-section').style.display = 'none';
+                          document.getElementById('set-khatm-section').style.display = 'none';
+                          swal("Duroods has been deleted!", {
+                            icon: "success",
+                          });
+                        } else {
+                          alert('Fail to delete duroods! Please try again...');
+                        }
+                      },
+                    );
+                  } else {
+                    swal("This duroods is safe!");
+                  }
+                }); 
+              });
             },
           );
 
