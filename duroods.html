@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey To Jannah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/templatemo-ocean-vibes.css">
+<!--
+
+TemplateMo 554 Ocean Vibes
+
+https://templatemo.com/tm-554-ocean-vibes
+
+-->
+</head>
+<body>
+    <div id="about" class="popup mfp-with-anim tm-bg-gray">
+		<a href="index.html" class="tm-close-popup">
+			Home
+		</a>
+		<h2 class="tm-color-primary tm-about-col tm-mb-40 tm-page-title">Duroods</h2>
+		<div class="tm-row tm-about-row">
+			<section id="create-khatm-section">
+        <div class="tm-col tm-about-col">
+          <div class="link-new-khatm">
+            <a href="#" id="link-mykhatm" style="width:150px;">MY DUROODS</a>
+          </div>
+        </div>
+				<div class="tm-col tm-about-col">
+					<img src="img/about.jpg" alt="Image" class="tm-mb-30">
+					<p class="tm-mb-40">
+            Want to keep <span class="tm-color-primary">Count</span> of your Duroods, Yaseens, Zikr etc...?
+					</p>
+					<p class="tm-mb-40">
+						Manage, track and get an individual and total count of yourself and your group contributions.
+					</p>
+				</div>
+				<div class="tm-col tm-about-col">
+					<div class="tm-row tm-contact-row">
+						<div class="tm-col tm-contact-col">
+							<form id="create-duroods-form" class="tm-contact-form">
+								<div class="form-group tm-text-center">
+									<input type="text" id="duroods-description" name="duroods" class="form-control rounded-0" style="margin-bottom: 5px;" placeholder="Duroods description" required />
+                  <input type="number" id="duroods-number" name="duroods-number" min="1" class="form-control rounded-0" placeholder="Total count" required />
+								</div>
+								<div class="form-group tm-text-center">
+									<button id="create-khatm" type="submit" class="tm-btn tm-btn-primary">Create Duroods</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="title-khatm-section">
+				<div class="link-new-khatm">
+					<a href="#" id="link-new-khatm">NEW</a>
+				</div>
+				<div class="title-khatm-div">
+					<div class="tm-col tm-about-col">
+						<p class="tm-mb-40">
+							<span class="khatm-title-main">
+								<span>
+									<span class="tm-color-green" id="khatm-title">Khatm title</span> <br>
+									<span id="khatm-time"></span> <br><br>
+								</span>
+								<span class="khatm-icons">
+									<a href="#" id="duroods_update"><i class="far fa-edit"></i></a>
+									<a><i class="far fa-trash-alt"></i></a>
+								</span>
+							</span>
+
+							<span> <span class="khatm-read" id="khatm-read"></span><span class="space"></span> of  <span class="khatm-allocated" id="khatm-allocated"></span><span
+									class="space"></span> Completed</span> <br><br>
+							<button type="button" class="whatsapp-btn" onclick="test()"><img class="whatsapp-img" src="img/whatsapp.png" alt="whatsapp"> Share this duroods</button>
+						</p>
+					</div>
+				</div>
+			</section>
+			<section id="set-khatm-section">
+				<div class="tm-col tm-about-col">
+					<div class="tm-mb-20 khaten-readers">
+						<div class="khatm-list">
+							<div class="khatm-list-title"> <div style="padding-left:10px">Add to count</div></div>
+							<div class="khatm-list-details">
+								<form id="add-duroods-form" method="POST" class="tm-contact-form">
+									<input type="text" id="duroods-reader" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+									<input type="number" id="duroods-counter" name="duroods-number" min="1" class="form-control rounded-0" placeholder="Count" required />
+									<button id="add-duroods" type="submit" class="tm-btn tm-btn-primary" style="width:100%; padding: 10px 40px;">Add</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="tm-mb-20">
+						<div class="duroods-list" id="duroods-list">
+							<!-- <div class="duroods-list-details">
+								<div class="duroods-list-details-row">
+									<div class="duroods-list-details-col1">
+										<div class="duroods-list-details-title">
+											<div class="duroods-list-details-name">Reader</div>
+											<div class="duroods-list-details-count">Count</div>
+										</div>
+										<div class="duroods-list-details-date">Date</div>
+									</div>
+									<div class="duroods-list-details-col2">
+										<button class="duroods-remove-btn" type="button" onclick="removeconfirm('qadd_sami_allah_allocated')"><i class="far fa-times-circle" style="font-size:25px;color:rgb(192, 18, 18)"></i></button>
+									</div>
+								</div>
+							</div>
+
+							<div class="duroods-list-details">
+								<div class="duroods-list-details-row">
+									<div class="duroods-list-details-col1">
+										<div class="duroods-list-details-title">
+											<div class="duroods-list-details-name">Reader</div>
+											<div class="duroods-list-details-count">Count</div>
+										</div>
+										<div class="duroods-list-details-date">Date</div>
+									</div>
+									<div class="duroods-list-details-col2">
+										<button class="duroods-remove-btn" type="button" onclick="removeconfirm('qadd_sami_allah_allocated')"><i class="far fa-times-circle" style="font-size:25px;color:rgb(192, 18, 18)"></i></button>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+					
+
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="close">&times;</div>
+      <div>Edit Durood Counter</div>
+			<div style="margin-top: 15px;">
+				<form id="update-duroods-form" method="POST" class="tm-contact-form modal-form">
+					<input type="text" id="duroods-reader-update" name="khatm" class="form-control rounded-0" placeholder="Reader name" required />
+					<input type="number" id="duroods-counter-update" name="duroods-number" min="1" class="form-control rounded-0" placeholder="Count" required />
+					<button id="add-duroods" type="submit" class="tm-btn tm-btn-primary" style="width:100%; padding: 10px 40px;">Update</button>
+				</form>
+			</div>
+    </div>
+  </div>
+
+    <footer class="tm-footer">
+        <span>Copyright &copy; 2020 Destination Jannah</span>
+        <span>Web Designed by Sh@rifa</span>
+</footer>
+
+    <script src="js/duroods.js"></script>
+    
+    <script src="js/sweetalert.min.js"></script>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+
+		<script>
+			let modal = document.getElementById("myModal");
+			
+			let btn = document.getElementById("duroods_update");
+			
+			let span = document.getElementsByClassName("close")[0];
+			
+			btn.onclick = function() {
+				modal.style.display = "block";
+			}
+			
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+			
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		</script>
+		<script>
+
+		</script>
+	
+</body>
+</html>

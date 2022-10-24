@@ -1,6 +1,6 @@
 <?php  
 ob_start();
-require("utility.php");
+require("../utility.php");
 
 $json = file_get_contents('php://input');
 $rawData = json_decode($json);

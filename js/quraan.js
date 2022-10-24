@@ -1,6 +1,6 @@
 //import create_khatm from "./module/createKhatm.js";
 const create_khatm = async (name) => {
-  const url = 'http://localhost/journey-to-jannah/quraan.php';
+  const url = 'http://localhost/journey-to-jannah/php/quraan.php';
   //console.log(url);
   const myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
@@ -28,7 +28,7 @@ const get_khatm = async (mydateKhatm) => {
     method: 'GET',
     redirect: 'follow',
   };
-  const url = ''.concat('http://localhost/journey-to-jannah/quraan-detail.php?item_id=', mydateKhatm);
+  const url = ''.concat('http://localhost/journey-to-jannah/php/quraan-detail.php?item_id=', mydateKhatm);
   const request = new Request(url);
 
   const response = await fetch(request, requestOptions);
@@ -731,6 +731,11 @@ if(storageKhatm) {
 
   
 } else {
+
+  const linkMyKhatm =  document.getElementById('link-mykhatm');
+  linkMyKhatm.addEventListener('click', () => {
+    swal("Alert", "Please create Khatm first!", "error");
+  });
 
   const createKhatmForm = document.getElementById('create-khatm-form');
 

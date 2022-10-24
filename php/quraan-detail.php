@@ -1,6 +1,6 @@
 <?php  
 ob_start();
-require_once("utility.php");
+require_once("../utility.php");
 
 $dataTime = $_GET['item_id'];
 
