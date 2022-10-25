@@ -24,37 +24,6 @@ const update_khatm_unread = async (default_id, khatm, name_field) => {
   return finalResponse;
 }
 
-// const updateKhatmUnread1 = document.getElementById('update-khatm-unread1');
-// const updateKhatmUnread2 = document.getElementById('update-khatm-unread2');
-// const updateKhatmUnread3 = document.getElementById('update-khatm-unread3');
-// const updateKhatmUnread4 = document.getElementById('update-khatm-unread4');
-// const updateKhatmUnread5 = document.getElementById('update-khatm-unread5');
-// const updateKhatmUnread6 = document.getElementById('update-khatm-unread6');
-// const updateKhatmUnread7 = document.getElementById('update-khatm-unread7');
-// const updateKhatmUnread8 = document.getElementById('update-khatm-unread8');
-// const updateKhatmUnread9 = document.getElementById('update-khatm-unread9');
-// const updateKhatmUnread10 = document.getElementById('update-khatm-unread10');
-// const updateKhatmUnread11 = document.getElementById('update-khatm-unread11');
-// const updateKhatmUnread12 = document.getElementById('update-khatm-unread12');
-// const updateKhatmUnread13 = document.getElementById('update-khatm-unread13');
-// const updateKhatmUnread14 = document.getElementById('update-khatm-unread14');
-// const updateKhatmUnread15 = document.getElementById('update-khatm-unread15');
-// const updateKhatmUnread16 = document.getElementById('update-khatm-unread16');
-// const updateKhatmUnread17 = document.getElementById('update-khatm-unread17');
-// const updateKhatmUnread18 = document.getElementById('update-khatm-unread18');
-// const updateKhatmUnread19 = document.getElementById('update-khatm-unread19');
-// const updateKhatmUnread20 = document.getElementById('update-khatm-unread20');
-// const updateKhatmUnread21 = document.getElementById('update-khatm-unread21');
-// const updateKhatmUnread22 = document.getElementById('update-khatm-unread22');
-// const updateKhatmUnread23 = document.getElementById('update-khatm-unread23');
-// const updateKhatmUnread24 = document.getElementById('update-khatm-unread24');
-// const updateKhatmUnread25 = document.getElementById('update-khatm-unread25');
-// const updateKhatmUnread26 = document.getElementById('update-khatm-unread26');
-// const updateKhatmUnread27 = document.getElementById('update-khatm-unread27');
-// const updateKhatmUnread28 = document.getElementById('update-khatm-unread28');
-// const updateKhatmUnread29 = document.getElementById('update-khatm-unread29');
-// const updateKhatmUnread30 = document.getElementById('update-khatm-unread30');
-
 // const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
 const unreadconfirm = (khatm_type) => {
@@ -66,6 +35,7 @@ const unreadconfirm = (khatm_type) => {
     dangerMode: true,
   }).then(() => {
     if(khatm_type === 'alif_lam_meem_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
       const khatmUpdateUnread1 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "alif_lam_meem_read");
       khatmUpdateUnread1.then(
         (value) => {
@@ -106,6 +76,7 @@ const unreadconfirm = (khatm_type) => {
     }
 
     if(khatm_type === 'sayaqool_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
       const khatmUpdateUnread2 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "sayaqool_read");
       khatmUpdateUnread2.then(
@@ -147,6 +118,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'tilkal_rusull_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread3 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "tilkal_rusull_read");
       khatmUpdateUnread3.then(
@@ -188,6 +160,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'lan_tana_loo_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
       
       const khatmUpdateUnread4 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "lan_tana_loo_read");
       khatmUpdateUnread4.then(
@@ -229,6 +202,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'wal_mohsanat_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
         
       const khatmUpdateUnread5 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "wal_mohsanat_read");
       khatmUpdateUnread5.then(
@@ -270,6 +244,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'la_yuhibbullah_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread6 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "la_yuhibbullah_read");
       khatmUpdateUnread6.then(
@@ -311,6 +286,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'wa_iza_samiu_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread7 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_iza_samiu_read");
       khatmUpdateUnread7.then(
@@ -352,6 +328,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'wa_lau_annana_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread8 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_lau_annana_read");
       khatmUpdateUnread8.then(
@@ -393,6 +370,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'qalal_malao_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread9 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "qalal_malao_read");
       khatmUpdateUnread9.then(
@@ -434,6 +412,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'wa_a_lamu_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread10 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_a_lamu_read");
       khatmUpdateUnread10.then(
@@ -475,6 +454,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'yatazeroon_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread11 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "yatazeroon_read");
       khatmUpdateUnread11.then(
@@ -516,6 +496,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'wa_mamin_da_abat_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread12 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_mamin_da_abat_read");
       khatmUpdateUnread12.then(
@@ -557,6 +538,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'wa_ma_ubrioo_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread13 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_ma_ubrioo_read");
       khatmUpdateUnread13.then(
@@ -598,6 +580,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'rubama_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread14 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "rubama_read");
       khatmUpdateUnread14.then(
@@ -639,6 +622,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'subhanallazi_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread15 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "subhanallazi_read");
       khatmUpdateUnread15.then(
@@ -680,6 +664,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'qal_alam_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread16 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "qal_alam_read");
       khatmUpdateUnread16.then(
@@ -721,6 +706,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'aqtarabo_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread17 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "aqtarabo_read");
       khatmUpdateUnread17.then(
@@ -762,6 +748,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'qadd_aflaha_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread18 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "qadd_aflaha_read");
       khatmUpdateUnread18.then(
@@ -803,6 +790,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'wa_qalallazina_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread19 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_qalallazina_read");
       khatmUpdateUnread19.then(
@@ -844,6 +832,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'a_man_khalaq_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread20 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "a_man_khalaq_read");
       khatmUpdateUnread20.then(
@@ -885,6 +874,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'utlu_ma_oohi_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread21 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "utlu_ma_oohi_read");
       khatmUpdateUnread21.then(
@@ -926,6 +916,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'wa_manyaqnut_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread22 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_manyaqnut_read");
       khatmUpdateUnread22.then(
@@ -967,6 +958,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'wa_mali_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread23 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_mali_read");
       khatmUpdateUnread23.then(
@@ -1008,6 +1000,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'faman_azlam_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread24 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "faman_azlam_read");
       khatmUpdateUnread24.then(
@@ -1049,6 +1042,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'elahe_yuruddo_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread25 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "elahe_yuruddo_read");
       khatmUpdateUnread25.then(
@@ -1090,6 +1084,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'ha_a_meem_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread26 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "ha_a_meem_read");
       khatmUpdateUnread26.then(
@@ -1131,6 +1126,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'qala_fama_khatbukum_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread27 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "qala_fama_khatbukum_read");
       khatmUpdateUnread27.then(
@@ -1172,6 +1168,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'qadd_sami_allah_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread28 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "qadd_sami_allah_read");
       khatmUpdateUnread28.then(
@@ -1213,6 +1210,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'tabarakallazi_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread29 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "tabarakallazi_read");
       khatmUpdateUnread29.then(
@@ -1254,6 +1252,7 @@ const unreadconfirm = (khatm_type) => {
     }
     
     if(khatm_type === 'amma_yatasa_aloon_read') {
+      const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
       const khatmUpdateUnread30 = update_khatm_unread(storageKhatm.mydateKhatm, storageKhatm.khatm, "amma_yatasa_aloon_read");
       khatmUpdateUnread30.then(

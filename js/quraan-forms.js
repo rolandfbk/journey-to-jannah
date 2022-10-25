@@ -56,11 +56,15 @@ const khatmListForm28 = document.getElementById('khatm-list-form28');
 const khatmListForm29 = document.getElementById('khatm-list-form29');
 const khatmListForm30 = document.getElementById('khatm-list-form30');
 
-// const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
+
 
 khatmListForm1.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput1 = document.getElementById('khatm-list-input1').value;
+  console.log(khatmListInput1);
+  console.log(storageKhatm.mydateKhatm);
+  console.log(storageKhatm.khatm);
  
   const khatmList1 = update_khatm(khatmListInput1, storageKhatm.mydateKhatm, storageKhatm.khatm, "alif_lam_meem_allocated");
   khatmList1.then(
@@ -103,6 +107,7 @@ khatmListForm1.addEventListener('submit', (event) => {
 
 khatmListForm2.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput2 = document.getElementById('khatm-list-input2').value;
  
   const khatmList2 = update_khatm(khatmListInput2, storageKhatm.mydateKhatm, storageKhatm.khatm, "sayaqool_allocated");
@@ -145,6 +150,7 @@ khatmListForm2.addEventListener('submit', (event) => {
 
 khatmListForm3.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput3 = document.getElementById('khatm-list-input3').value;
  
   const khatmList3 = update_khatm(khatmListInput3, storageKhatm.mydateKhatm, storageKhatm.khatm, "tilkal_rusull_allocated");
@@ -187,6 +193,7 @@ khatmListForm3.addEventListener('submit', (event) => {
 
 khatmListForm4.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput4 = document.getElementById('khatm-list-input4').value;
  
   const khatmList4 = update_khatm(khatmListInput4, storageKhatm.mydateKhatm, storageKhatm.khatm, "lan_tana_loo_allocated");
@@ -229,6 +236,7 @@ khatmListForm4.addEventListener('submit', (event) => {
 
 khatmListForm5.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput5 = document.getElementById('khatm-list-input5').value;
  
   const khatmList5 = update_khatm(khatmListInput5, storageKhatm.mydateKhatm, storageKhatm.khatm, "wal_mohsanat_allocated");
@@ -271,6 +279,7 @@ khatmListForm5.addEventListener('submit', (event) => {
 
 khatmListForm6.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput6 = document.getElementById('khatm-list-input6').value;
  
   const khatmList6 = update_khatm(khatmListInput6, storageKhatm.mydateKhatm, storageKhatm.khatm, "la_yuhibbullah_allocated");
@@ -313,6 +322,7 @@ khatmListForm6.addEventListener('submit', (event) => {
 
 khatmListForm7.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput7 = document.getElementById('khatm-list-input7').value;
  
   const khatmList7 = update_khatm(khatmListInput7, storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_iza_samiu_allocated");
@@ -355,6 +365,7 @@ khatmListForm7.addEventListener('submit', (event) => {
 
 khatmListForm8.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput8 = document.getElementById('khatm-list-input8').value;
  
   const khatmList8 = update_khatm(khatmListInput8, storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_lau_annana_allocated");
@@ -397,6 +408,7 @@ khatmListForm8.addEventListener('submit', (event) => {
 
 khatmListForm9.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput9 = document.getElementById('khatm-list-input9').value;
  
   const khatmList9 = update_khatm(khatmListInput9, storageKhatm.mydateKhatm, storageKhatm.khatm, "qalal_malao_allocated");
@@ -439,6 +451,7 @@ khatmListForm9.addEventListener('submit', (event) => {
 
 khatmListForm10.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput10 = document.getElementById('khatm-list-input10').value;
  
   const khatmList10 = update_khatm(khatmListInput10, storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_a_lamu_allocated");
@@ -481,6 +494,7 @@ khatmListForm10.addEventListener('submit', (event) => {
 
 khatmListForm11.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput11 = document.getElementById('khatm-list-input11').value;
  
   const khatmList11 = update_khatm(khatmListInput11, storageKhatm.mydateKhatm, storageKhatm.khatm, "yatazeroon_allocated");
@@ -523,6 +537,7 @@ khatmListForm11.addEventListener('submit', (event) => {
 
 khatmListForm12.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput12 = document.getElementById('khatm-list-input12').value;
  
   const khatmList12 = update_khatm(khatmListInput12, storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_mamin_da_abat_allocated");
@@ -565,6 +580,7 @@ khatmListForm12.addEventListener('submit', (event) => {
 
 khatmListForm13.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput13 = document.getElementById('khatm-list-input13').value;
  
   const khatmList13 = update_khatm(khatmListInput13, storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_ma_ubrioo_allocated");
@@ -607,6 +623,7 @@ khatmListForm13.addEventListener('submit', (event) => {
 
 khatmListForm14.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput14 = document.getElementById('khatm-list-input14').value;
  
   const khatmList14 = update_khatm(khatmListInput14, storageKhatm.mydateKhatm, storageKhatm.khatm, "rubama_allocated");
@@ -649,6 +666,7 @@ khatmListForm14.addEventListener('submit', (event) => {
 
 khatmListForm15.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput15 = document.getElementById('khatm-list-input15').value;
  
   const khatmList15 = update_khatm(khatmListInput15, storageKhatm.mydateKhatm, storageKhatm.khatm, "subhanallazi_allocated");
@@ -691,6 +709,7 @@ khatmListForm15.addEventListener('submit', (event) => {
 
 khatmListForm16.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput16 = document.getElementById('khatm-list-input16').value;
  
   const khatmList16 = update_khatm(khatmListInput16, storageKhatm.mydateKhatm, storageKhatm.khatm, "qal_alam_allocated");
@@ -733,6 +752,7 @@ khatmListForm16.addEventListener('submit', (event) => {
 
 khatmListForm17.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput17 = document.getElementById('khatm-list-input17').value;
  
   const khatmList17 = update_khatm(khatmListInput17, storageKhatm.mydateKhatm, storageKhatm.khatm, "aqtarabo_allocated");
@@ -775,6 +795,7 @@ khatmListForm17.addEventListener('submit', (event) => {
 
 khatmListForm18.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput18 = document.getElementById('khatm-list-input18').value;
  
   const khatmList18 = update_khatm(khatmListInput18, storageKhatm.mydateKhatm, storageKhatm.khatm, "qadd_aflaha_allocated");
@@ -817,6 +838,7 @@ khatmListForm18.addEventListener('submit', (event) => {
 
 khatmListForm19.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput19 = document.getElementById('khatm-list-input19').value;
  
   const khatmList19 = update_khatm(khatmListInput19, storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_qalallazina_allocated");
@@ -859,6 +881,7 @@ khatmListForm19.addEventListener('submit', (event) => {
 
 khatmListForm20.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput20 = document.getElementById('khatm-list-input20').value;
  
   const khatmList20 = update_khatm(khatmListInput20, storageKhatm.mydateKhatm, storageKhatm.khatm, "a_man_khalaq_allocated");
@@ -901,6 +924,7 @@ khatmListForm20.addEventListener('submit', (event) => {
 
 khatmListForm21.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput21 = document.getElementById('khatm-list-input21').value;
  
   const khatmList21 = update_khatm(khatmListInput21, storageKhatm.mydateKhatm, storageKhatm.khatm, "utlu_ma_oohi_allocated");
@@ -943,6 +967,7 @@ khatmListForm21.addEventListener('submit', (event) => {
 
 khatmListForm22.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput22 = document.getElementById('khatm-list-input22').value;
  
   const khatmList22 = update_khatm(khatmListInput22, storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_manyaqnut_allocated");
@@ -985,6 +1010,7 @@ khatmListForm22.addEventListener('submit', (event) => {
 
 khatmListForm23.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput23 = document.getElementById('khatm-list-input23').value;
  
   const khatmList23 = update_khatm(khatmListInput23, storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_mali_allocated");
@@ -1027,6 +1053,7 @@ khatmListForm23.addEventListener('submit', (event) => {
 
 khatmListForm24.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput24 = document.getElementById('khatm-list-input24').value;
  
   const khatmList24 = update_khatm(khatmListInput24, storageKhatm.mydateKhatm, storageKhatm.khatm, "faman_azlam_allocated");
@@ -1069,6 +1096,7 @@ khatmListForm24.addEventListener('submit', (event) => {
 
 khatmListForm25.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput25 = document.getElementById('khatm-list-input25').value;
  
   const khatmList25 = update_khatm(khatmListInput25, storageKhatm.mydateKhatm, storageKhatm.khatm, "elahe_yuruddo_allocated");
@@ -1111,6 +1139,7 @@ khatmListForm25.addEventListener('submit', (event) => {
 
 khatmListForm26.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput26 = document.getElementById('khatm-list-input26').value;
  
   const khatmList26 = update_khatm(khatmListInput26, storageKhatm.mydateKhatm, storageKhatm.khatm, "ha_a_meem_allocated");
@@ -1153,6 +1182,7 @@ khatmListForm26.addEventListener('submit', (event) => {
 
 khatmListForm27.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput27 = document.getElementById('khatm-list-input27').value;
  
   const khatmList27 = update_khatm(khatmListInput27, storageKhatm.mydateKhatm, storageKhatm.khatm, "qala_fama_khatbukum_allocated");
@@ -1195,6 +1225,7 @@ khatmListForm27.addEventListener('submit', (event) => {
 
 khatmListForm28.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput28 = document.getElementById('khatm-list-input28').value;
  
   const khatmList28 = update_khatm(khatmListInput28, storageKhatm.mydateKhatm, storageKhatm.khatm, "qadd_sami_allah_allocated");
@@ -1237,6 +1268,7 @@ khatmListForm28.addEventListener('submit', (event) => {
 
 khatmListForm29.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput29 = document.getElementById('khatm-list-input29').value;
  
   const khatmList29 = update_khatm(khatmListInput29, storageKhatm.mydateKhatm, storageKhatm.khatm, "tabarakallazi_allocated");
@@ -1279,6 +1311,7 @@ khatmListForm29.addEventListener('submit', (event) => {
 
 khatmListForm30.addEventListener('submit', (event) => {
   event.preventDefault();
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   const khatmListInput30 = document.getElementById('khatm-list-input30').value;
  
   const khatmList30 = update_khatm(khatmListInput30, storageKhatm.mydateKhatm, storageKhatm.khatm, "amma_yatasa_aloon_allocated");

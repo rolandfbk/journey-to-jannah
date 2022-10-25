@@ -58,6 +58,7 @@ const updateKhatmRead30 = document.getElementById('update-khatm-read30');
 // const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
 updateKhatmRead1.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead1 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "alif_lam_meem_read");
   khatmUpdateRead1.then(
@@ -99,6 +100,7 @@ updateKhatmRead1.addEventListener('click', () => {
 })
 
 updateKhatmRead2.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead2 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "sayaqool_read");
   khatmUpdateRead2.then(
@@ -140,6 +142,7 @@ updateKhatmRead2.addEventListener('click', () => {
 })
 
 updateKhatmRead3.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead3 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "tilkal_rusull_read");
   khatmUpdateRead3.then(
@@ -181,6 +184,7 @@ updateKhatmRead3.addEventListener('click', () => {
 })
 
 updateKhatmRead4.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
   
   const khatmUpdateRead4 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "lan_tana_loo_read");
   khatmUpdateRead4.then(
@@ -222,6 +226,7 @@ updateKhatmRead4.addEventListener('click', () => {
 })
 
 updateKhatmRead5.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
     
   const khatmUpdateRead5 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "wal_mohsanat_read");
   khatmUpdateRead5.then(
@@ -263,6 +268,7 @@ updateKhatmRead5.addEventListener('click', () => {
 })
 
 updateKhatmRead6.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead6 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "la_yuhibbullah_read");
   khatmUpdateRead6.then(
@@ -304,6 +310,7 @@ updateKhatmRead6.addEventListener('click', () => {
 })
 
 updateKhatmRead7.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead7 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_iza_samiu_read");
   khatmUpdateRead7.then(
@@ -345,6 +352,7 @@ updateKhatmRead7.addEventListener('click', () => {
 })
 
 updateKhatmRead8.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead8 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_lau_annana_read");
   khatmUpdateRead8.then(
@@ -386,6 +394,7 @@ updateKhatmRead8.addEventListener('click', () => {
 })
 
 updateKhatmRead9.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead9 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "qalal_malao_read");
   khatmUpdateRead9.then(
@@ -427,6 +436,7 @@ updateKhatmRead9.addEventListener('click', () => {
 })
 
 updateKhatmRead10.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead10 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_a_lamu_read");
   khatmUpdateRead10.then(
@@ -468,6 +478,7 @@ updateKhatmRead10.addEventListener('click', () => {
 })
 
 updateKhatmRead11.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead11 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "yatazeroon_read");
   khatmUpdateRead11.then(
@@ -509,6 +520,7 @@ updateKhatmRead11.addEventListener('click', () => {
 })
 
 updateKhatmRead12.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead12 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_mamin_da_abat_read");
   khatmUpdateRead12.then(
@@ -550,6 +562,7 @@ updateKhatmRead12.addEventListener('click', () => {
 })
 
 updateKhatmRead13.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead13 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_ma_ubrioo_read");
   khatmUpdateRead13.then(
@@ -591,6 +604,7 @@ updateKhatmRead13.addEventListener('click', () => {
 })
 
 updateKhatmRead14.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead14 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "rubama_read");
   khatmUpdateRead14.then(
@@ -632,6 +646,7 @@ updateKhatmRead14.addEventListener('click', () => {
 })
 
 updateKhatmRead15.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead15 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "subhanallazi_read");
   khatmUpdateRead15.then(
@@ -673,6 +688,7 @@ updateKhatmRead15.addEventListener('click', () => {
 })
 
 updateKhatmRead16.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead16 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "qal_alam_read");
   khatmUpdateRead16.then(
@@ -714,6 +730,7 @@ updateKhatmRead16.addEventListener('click', () => {
 })
 
 updateKhatmRead17.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead17 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "aqtarabo_read");
   khatmUpdateRead17.then(
@@ -755,6 +772,7 @@ updateKhatmRead17.addEventListener('click', () => {
 })
 
 updateKhatmRead18.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead18 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "qadd_aflaha_read");
   khatmUpdateRead18.then(
@@ -796,6 +814,7 @@ updateKhatmRead18.addEventListener('click', () => {
 })
 
 updateKhatmRead19.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead19 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_qalallazina_read");
   khatmUpdateRead19.then(
@@ -837,6 +856,7 @@ updateKhatmRead19.addEventListener('click', () => {
 })
 
 updateKhatmRead20.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead20 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "a_man_khalaq_read");
   khatmUpdateRead20.then(
@@ -878,6 +898,7 @@ updateKhatmRead20.addEventListener('click', () => {
 })
 
 updateKhatmRead21.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead21 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "utlu_ma_oohi_read");
   khatmUpdateRead21.then(
@@ -919,6 +940,7 @@ updateKhatmRead21.addEventListener('click', () => {
 })
 
 updateKhatmRead22.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead22 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_manyaqnut_read");
   khatmUpdateRead22.then(
@@ -960,6 +982,7 @@ updateKhatmRead22.addEventListener('click', () => {
 })
 
 updateKhatmRead23.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead23 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "wa_mali_read");
   khatmUpdateRead23.then(
@@ -1001,6 +1024,7 @@ updateKhatmRead23.addEventListener('click', () => {
 })
 
 updateKhatmRead24.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead24 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "faman_azlam_read");
   khatmUpdateRead24.then(
@@ -1042,6 +1066,7 @@ updateKhatmRead24.addEventListener('click', () => {
 })
 
 updateKhatmRead25.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead25 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "elahe_yuruddo_read");
   khatmUpdateRead25.then(
@@ -1083,6 +1108,7 @@ updateKhatmRead25.addEventListener('click', () => {
 })
 
 updateKhatmRead26.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead26 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "ha_a_meem_read");
   khatmUpdateRead26.then(
@@ -1124,6 +1150,7 @@ updateKhatmRead26.addEventListener('click', () => {
 })
 
 updateKhatmRead27.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead27 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "qala_fama_khatbukum_read");
   khatmUpdateRead27.then(
@@ -1165,6 +1192,7 @@ updateKhatmRead27.addEventListener('click', () => {
 })
 
 updateKhatmRead28.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead28 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "qadd_sami_allah_read");
   khatmUpdateRead28.then(
@@ -1206,6 +1234,7 @@ updateKhatmRead28.addEventListener('click', () => {
 })
 
 updateKhatmRead29.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead29 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "tabarakallazi_read");
   khatmUpdateRead29.then(
@@ -1247,6 +1276,7 @@ updateKhatmRead29.addEventListener('click', () => {
 })
 
 updateKhatmRead30.addEventListener('click', () => {
+  const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
 
   const khatmUpdateRead30 = update_khatm_read(storageKhatm.mydateKhatm, storageKhatm.khatm, "amma_yatasa_aloon_read");
   khatmUpdateRead30.then(
