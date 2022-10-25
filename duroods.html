@@ -163,6 +163,13 @@ https://templatemo.com/tm-554-ocean-vibes
     <script src="js/templatemo-script.js"></script>
 
 		<script>
+			const share_whatsapp = () => {
+				const storageKhatm = JSON.parse(localStorage.getItem('jannah_duroods'));
+				location.href = "https://api.whatsapp.com/send?text=Journey%20to%20Jannah%20-%20Durood%20Counter%20Tracker%20-%20http://localhost/journey-to-jannah/share.php?topic="+storageKhatm.mydateKhatm;
+			}
+		</script>
+		
+		<script>
 			let modal = document.getElementById("myModal");
 			
 			let btn = document.getElementById("duroods_update");

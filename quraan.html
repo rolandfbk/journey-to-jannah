@@ -72,7 +72,7 @@ https://templatemo.com/tm-554-ocean-vibes
 
 							<span>Read <span class="khatm-read" id="khatm-read"></span><span class="space"></span> || <span
 									class="space"></span>Allocated <span class="khatm-allocated" id="khatm-allocated"></span></span> <br><br>
-							<button type="button" class="whatsapp-btn" onclick="test()"><img class="whatsapp-img" src="img/whatsapp.png" alt="whatsapp"> Share this Khatm</button>
+							<button type="button" class="whatsapp-btn" onclick="share_whatsapp()"><img class="whatsapp-img" src="img/whatsapp.png" alt="whatsapp"> Share this Khatm</button>
 						</p>
 					</div>
 				</div>
@@ -776,15 +776,9 @@ https://templatemo.com/tm-554-ocean-vibes
     <script src="js/templatemo-script.js"></script>
 
 		<script>
-			function test() {
-				//swal ( "Please confirm" ,  "Remove this member?" ,  "warning" )
-				swal({
-					title: "Please confirm",
-					text: "Remove this member?",
-					icon: "warning",
-					buttons: true,
-					dangerMode: true,
-				})
+			const share_whatsapp = () => {
+				const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
+				location.href = "https://api.whatsapp.com/send?text=Journey%20to%20Jannah%20-%20Quraan%20Khatm%20Tracker%20-%20http://localhost/journey-to-jannah/share-khatm.php?topic="+storageKhatm.mydateKhatm;
 			}
 		</script>
 
