@@ -665,6 +665,88 @@ const showKhatmDetails = (khatmObj) => {
   }
 };
 
+const delete_khatm = async (id_date) => {
+  const url = 'http://localhost/journey-to-jannah/php/khatm-delete.php';
+  const myHeaders = new Headers();
+  myHeaders.append('Content-Type', 'application/json');
+
+  const raw = JSON.stringify({
+    id_date: id_date,
+  });
+
+  const requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow',
+  };
+
+  const response = await fetch(url, requestOptions);
+  const myResult = await response.text();
+  // console.log(myResult);
+  const finalResponse = JSON.parse(myResult);
+
+  return finalResponse;
+}
+
+const deleteKhatm = (mydateKhatm) => {
+  const deleteDuroodsForm = document.getElementById('khatm_delete');
+  deleteDuroodsForm.addEventListener('click', (e) => {
+    e.preventDefault();
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this Kathm!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if(willDelete) {
+        const khatmRemove = delete_khatm(mydateKhatm);
+        khatmRemove.then(
+          (value) => {
+            if(value) {
+              localStorage.removeItem('jannah');
+              document.getElementById('create-khatm-section').style.display = 'block';
+              document.getElementById('title-khatm-section').style.display = 'none';
+              document.getElementById('set-khatm-section').style.display = 'none';
+              swal("Khatm has been deleted!", {
+                icon: "success",
+              });
+            } else {
+              alert('Fail to delete khatm! Please try again...');
+            }
+          },
+        );
+      } else {
+        swal("This Khatm is safe!");
+      }
+    }); 
+  });
+};
+
+const duplicate_khatm = async (khatm_name) => {
+  const duplicatKhatm = create_khatm(khatm_name);
+  duplicatKhatm.then(
+    (value) => {
+      
+      if(value) {
+        const jannahKhatm = {
+          khatm: khatm_name,
+          mydateKhatm: value[0].unixTime,
+          khatmDateCreated: value[0].khatmDateTime,
+        };
+      
+        localStorage.setItem('jannah', JSON.stringify(jannahKhatm));
+        location.reload();
+
+      } else {
+        alert('Fail to create khatm! Please try again...');
+      }
+    },
+  );
+};
+
 
 
 const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
@@ -685,9 +767,17 @@ if(storageKhatm) {
 
   const linkMyKhatm =  document.getElementById('link-mykhatm');
   linkMyKhatm.addEventListener('click', () => {
-    document.getElementById('create-khatm-section').style.display = 'none';
-    document.getElementById('title-khatm-section').style.display = 'block';
-    document.getElementById('set-khatm-section').style.display = 'block';
+    const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
+    if(storageKhatm) {
+      document.getElementById('create-khatm-section').style.display = 'none';
+      document.getElementById('title-khatm-section').style.display = 'block';
+      document.getElementById('set-khatm-section').style.display = 'block';
+    } else {
+      const linkMyKhatm =  document.getElementById('link-mykhatm');
+      linkMyKhatm.addEventListener('click', () => {
+        swal("Alert", "Please create Khatm first!", "error");
+      });
+    }
   });
 
   const khatmDataValue = get_khatm(storageKhatm.mydateKhatm);
@@ -726,6 +816,12 @@ if(storageKhatm) {
               console.log('Khatm has been updated!');
               console.log(khatmObj);
               showKhatmDetails(khatmObj);
+              deleteKhatm(storageKhatm.mydateKhatm);
+              const khatmDuplicate = document.getElementById('khatm_duplicate');
+              khatmDuplicate.addEventListener('click', (e) => {
+                e.preventDefault();
+                duplicate_khatm(storageKhatm.khatm);
+              });
             } else {
               alert('Fail to update Khatm! Please try again...');
             }
@@ -733,6 +829,12 @@ if(storageKhatm) {
         );
       });
       showKhatmDetails(khatmObj);
+      deleteKhatm(storageKhatm.mydateKhatm);
+      const khatmDuplicate = document.getElementById('khatm_duplicate');
+      khatmDuplicate.addEventListener('click', (e) => {
+        e.preventDefault();
+        duplicate_khatm(storageKhatm.khatm);
+      });
     },
   );
 
@@ -801,6 +903,12 @@ if(storageKhatm) {
                         icon: "success",
                       });
                       showKhatmDetails(khatmObj);
+                      deleteKhatm(storageKhatm.mydateKhatm);
+                      const khatmDuplicate = document.getElementById('khatm_duplicate');
+                      khatmDuplicate.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        duplicate_khatm(storageKhatm.khatm);
+                      });
                     } else {
                       alert('Fail to update Khatm! Please try again...');
                     }
@@ -808,6 +916,12 @@ if(storageKhatm) {
                 );
               });
               showKhatmDetails(khatmObj);
+              deleteKhatm(storageKhatm.mydateKhatm);
+              const khatmDuplicate = document.getElementById('khatm_duplicate');
+              khatmDuplicate.addEventListener('click', (e) => {
+                e.preventDefault();
+                duplicate_khatm(storageKhatm.khatm);
+              });
             },
           );
 
@@ -890,6 +1004,12 @@ if(storageKhatm) {
                         icon: "success",
                       });
                       showKhatmDetails(khatmObj);
+                      deleteKhatm(storageKhatm.mydateKhatm);
+                      const khatmDuplicate = document.getElementById('khatm_duplicate');
+                      khatmDuplicate.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        duplicate_khatm(storageKhatm.khatm);
+                      });
                     } else {
                       alert('Fail to update Khatm! Please try again...');
                     }
@@ -897,6 +1017,12 @@ if(storageKhatm) {
                 );
               });
               showKhatmDetails(khatmObj);
+              deleteKhatm(storageKhatm.mydateKhatm);
+              const khatmDuplicate = document.getElementById('khatm_duplicate');
+              khatmDuplicate.addEventListener('click', (e) => {
+                e.preventDefault();
+                duplicate_khatm(storageKhatm.khatm);
+              });
             },
           );
 

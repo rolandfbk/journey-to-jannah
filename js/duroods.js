@@ -257,9 +257,18 @@ if(storageKhatm) {
 
   const linkMyKhatm =  document.getElementById('link-mykhatm');
   linkMyKhatm.addEventListener('click', () => {
-    document.getElementById('create-khatm-section').style.display = 'none';
-    document.getElementById('title-khatm-section').style.display = 'block';
-    document.getElementById('set-khatm-section').style.display = 'block';
+    const storageKhatm = JSON.parse(localStorage.getItem('jannah_duroods'));
+    if(storageKhatm) {
+      document.getElementById('create-khatm-section').style.display = 'none';
+      document.getElementById('title-khatm-section').style.display = 'block';
+      document.getElementById('set-khatm-section').style.display = 'block';
+    } else {
+      const linkMyKhatm =  document.getElementById('link-mykhatm');
+      linkMyKhatm.addEventListener('click', () => {
+        swal("Alert", "Please create Duroods first!", "error");
+      });
+    }
+    
   });
 
   const khatmDataValue = get_duroods(storageKhatm.mydateKhatm);
