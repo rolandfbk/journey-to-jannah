@@ -163,6 +163,7 @@ a {
     justify-content: space-between;
     padding: 25px;
     font-size: 0.9em;
+    background-color: #d3d3d3
 }
 
 .tm-close-popup {
@@ -1036,7 +1037,9 @@ input:disabled {
     gap: 5px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) */
+
+@media (max-width: 1980px) {
     .tm-footer {
         flex-direction: column;
         align-items: center;

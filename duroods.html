@@ -74,7 +74,7 @@ https://templatemo.com/tm-554-ocean-vibes
 
 							<span> <span class="khatm-read" id="khatm-read"></span><span class="space"></span> of  <span class="khatm-allocated" id="khatm-allocated"></span><span
 									class="space"></span> Completed</span> <br><br>
-							<button type="button" class="whatsapp-btn" onclick="test()"><img class="whatsapp-img" src="img/whatsapp.png" alt="whatsapp"> Share this duroods</button>
+							<button type="button" class="whatsapp-btn" onclick="share_whatsapp()"><img class="whatsapp-img" src="img/whatsapp.png" alt="whatsapp"> Share this duroods</button>
 						</p>
 					</div>
 				</div>
@@ -165,7 +165,7 @@ https://templatemo.com/tm-554-ocean-vibes
 		<script>
 			const share_whatsapp = () => {
 				const storageKhatm = JSON.parse(localStorage.getItem('jannah_duroods'));
-				location.href = "https://api.whatsapp.com/send?text=Journey%20to%20Jannah%20-%20Durood%20Counter%20Tracker%20-%20http://localhost/journey-to-jannah/share.php?topic="+storageKhatm.mydateKhatm;
+				location.href = "https://api.whatsapp.com/send?text=Journey%20to%20Jannah%20-%20Durood%20Counter%20Tracker%20-%20http://localhost/journey-to-jannah/share-durood.php?topic="+storageKhatm.mydateKhatm;
 			}
 		</script>
 		
