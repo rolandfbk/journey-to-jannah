@@ -148,8 +148,10 @@ https://templatemo.com/tm-554-ocean-vibes
   </div>
 
     <footer class="tm-footer">
-        <span>Copyright &copy; 2020 Destination Jannah</span>
-        <span>Web Designed by Sh@rifa</span>
+			<span>Copyright &copy; <span id="current-date"></span> Destination Jannah</span>
+      <span>A special gift to Sharifa</span>
+      <span>Web Designed by <a href="rolandoy.com" target="_blank">Roland</a></span>     
+       
 </footer>
 
     <script src="js/duroods.js"></script>
@@ -193,6 +195,13 @@ https://templatemo.com/tm-554-ocean-vibes
 		<script>
 
 		</script>
+
+<script>
+	$(function(){
+			var currentYear = new Date().getFullYear();
+			$('#current-date').text(currentYear);
+	});
+	</script>
 	
 </body>
 </html>
