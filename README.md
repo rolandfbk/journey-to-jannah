@@ -2,6 +2,8 @@
 
 > The Journey to Jannah app offers a platform for a group of people to complete a specified supplication intended for a certain task undertaken. The moderator creates a Khatm and shares it on WhatsApp with the group,  those who receive the shared link then allocate themselves their elected chapters and confirm their recitations. The app also comprises of a Durood counter which enables users to allocate a numeric count and keep a tally leading to the count.
 
+**For better experience, kindly use the mobile version as the app uses WhatsApp to share contents**
+
 ## Features implemented so far are:
 
 - Responsive HTML page
