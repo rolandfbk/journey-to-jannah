@@ -23,6 +23,36 @@ const create_khatm = async (name) => {
   return finalResponse;
 };
 
+const create_khatm_exact = async () => {
+  const requestOptions = {
+    method: 'GET',
+    redirect: 'follow',
+  };
+  const url = 'http://localhost/journey-to-jannah/php/duplicate-exact.php';
+  const request = new Request(url);
+
+  const response = await fetch(request, requestOptions);
+  const result = await response.text();
+  const myResult = JSON.parse(result);
+
+  return myResult;
+};
+
+const create_khatm_shift = async () => {
+  const requestOptions = {
+    method: 'GET',
+    redirect: 'follow',
+  };
+  const url = 'http://localhost/journey-to-jannah/php/duplicate-shift.php';
+  const request = new Request(url);
+
+  const response = await fetch(request, requestOptions);
+  const result = await response.text();
+  const myResult = JSON.parse(result);
+
+  return myResult;
+};
+
 const get_khatm = async (mydateKhatm) => {
   const requestOptions = {
     method: 'GET',
@@ -741,12 +771,55 @@ const duplicate_khatm = async (khatm_name) => {
         location.reload();
 
       } else {
-        alert('Fail to create khatm! Please try again...');
+        alert('Fail to dulicate khatm! Please try again...');
       }
     },
   );
 };
 
+const duplicate_khatm_exact = async () => {
+  const duplicatKhatmExact = create_khatm_exact();
+  duplicatKhatmExact.then(
+    (value) => {
+      
+      if(value) {
+        const jannahKhatm = {
+          khatm: value[0].khatm,
+          mydateKhatm: value[0].unixTime,
+          khatmDateCreated: value[0].khatmDateTime,
+        };
+      
+        localStorage.setItem('jannah', JSON.stringify(jannahKhatm));
+        location.reload();
+
+      } else {
+        alert('Fail to duplicate khatm! Please try again...');
+      }
+    },
+  );
+};
+
+const duplicate_khatm_shift = async () => {
+  const duplicatKhatmShift = create_khatm_shift();
+  duplicatKhatmShift.then(
+    (value) => {
+      
+      if(value) {
+        const jannahKhatm = {
+          khatm: value[0].khatm,
+          mydateKhatm: value[0].unixTime,
+          khatmDateCreated: value[0].khatmDateTime,
+        };
+      
+        localStorage.setItem('jannah', JSON.stringify(jannahKhatm));
+        location.reload();
+
+      } else {
+        alert('Fail to duplicate khatm! Please try again...');
+      }
+    },
+  );
+};
 
 
 const storageKhatm = JSON.parse(localStorage.getItem('jannah'));
@@ -817,10 +890,44 @@ if(storageKhatm) {
               console.log(khatmObj);
               showKhatmDetails(khatmObj);
               deleteKhatm(storageKhatm.mydateKhatm);
-              const khatmDuplicate = document.getElementById('khatm_duplicate');
-              khatmDuplicate.addEventListener('click', (e) => {
+              const khatmDuplicateExact = document.getElementById('khatm_duplicate_exact');
+              khatmDuplicateExact.addEventListener('click', (e) => {
                 e.preventDefault();
-                duplicate_khatm(storageKhatm.khatm);
+                swal({
+                  title: "Exact Duplicate?",
+                  text: "Duplicate this Khatm as it is?",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                .then((willUpdate) => {
+                  if (willUpdate) {
+                    // duplicate_khatm(storageKhatm.khatm);
+                    duplicate_khatm_exact();
+                  } else {
+                    swal("Khatm not duplicated!");
+                  }
+                });
+              });
+
+              const khatmDuplicateShift = document.getElementById('khatm_duplicate_shift');
+              khatmDuplicateShift.addEventListener('click', (e) => {
+                e.preventDefault();
+                swal({
+                  title: "Shift Duplicate?",
+                  text: "Duplicate this Khatm by shifting readers??",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                .then((willUpdate) => {
+                  if (willUpdate) {
+                    // duplicate_khatm(storageKhatm.khatm);
+                    duplicate_khatm_shift();
+                  } else {
+                    swal("Khatm not duplicated!");
+                  }
+                });
               });
             } else {
               alert('Fail to update Khatm! Please try again...');
@@ -830,10 +937,44 @@ if(storageKhatm) {
       });
       showKhatmDetails(khatmObj);
       deleteKhatm(storageKhatm.mydateKhatm);
-      const khatmDuplicate = document.getElementById('khatm_duplicate');
-      khatmDuplicate.addEventListener('click', (e) => {
+      const khatmDuplicateExact = document.getElementById('khatm_duplicate_exact');
+      khatmDuplicateExact.addEventListener('click', (e) => {
         e.preventDefault();
-        duplicate_khatm(storageKhatm.khatm);
+        swal({
+          title: "Exact Duplicate?",
+          text: "Duplicate this Khatm as it is?",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willUpdate) => {
+          if (willUpdate) {
+            // duplicate_khatm(storageKhatm.khatm);
+            duplicate_khatm_exact();
+          } else {
+            swal("Khatm not duplicated!");
+          }
+        });
+      });
+
+      const khatmDuplicateShift = document.getElementById('khatm_duplicate_shift');
+      khatmDuplicateShift.addEventListener('click', (e) => {
+        e.preventDefault();
+        swal({
+          title: "Shift Duplicate?",
+          text: "Duplicate this Khatm by shifting readers??",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willUpdate) => {
+          if (willUpdate) {
+            // duplicate_khatm(storageKhatm.khatm);
+            duplicate_khatm_shift();
+          } else {
+            swal("Khatm not duplicated!");
+          }
+        });
       });
     },
   );
@@ -904,10 +1045,44 @@ if(storageKhatm) {
                       });
                       showKhatmDetails(khatmObj);
                       deleteKhatm(storageKhatm.mydateKhatm);
-                      const khatmDuplicate = document.getElementById('khatm_duplicate');
-                      khatmDuplicate.addEventListener('click', (e) => {
+                      const khatmDuplicateExact = document.getElementById('khatm_duplicate_exact');
+                      khatmDuplicateExact.addEventListener('click', (e) => {
                         e.preventDefault();
-                        duplicate_khatm(storageKhatm.khatm);
+                        swal({
+                          title: "Exact Duplicate?",
+                          text: "Duplicate this Khatm as it is?",
+                          icon: "warning",
+                          buttons: true,
+                          dangerMode: true,
+                        })
+                        .then((willUpdate) => {
+                          if (willUpdate) {
+                            // duplicate_khatm(storageKhatm.khatm);
+                            duplicate_khatm_exact();
+                          } else {
+                            swal("Khatm not duplicated!");
+                          }
+                        });
+                      });
+
+                      const khatmDuplicateShift = document.getElementById('khatm_duplicate_shift');
+                      khatmDuplicateShift.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        swal({
+                          title: "Shift Duplicate?",
+                          text: "Duplicate this Khatm by shifting readers??",
+                          icon: "warning",
+                          buttons: true,
+                          dangerMode: true,
+                        })
+                        .then((willUpdate) => {
+                          if (willUpdate) {
+                            // duplicate_khatm(storageKhatm.khatm);
+                            duplicate_khatm_shift();
+                          } else {
+                            swal("Khatm not duplicated!");
+                          }
+                        });
                       });
                     } else {
                       alert('Fail to update Khatm! Please try again...');
@@ -917,10 +1092,44 @@ if(storageKhatm) {
               });
               showKhatmDetails(khatmObj);
               deleteKhatm(storageKhatm.mydateKhatm);
-              const khatmDuplicate = document.getElementById('khatm_duplicate');
-              khatmDuplicate.addEventListener('click', (e) => {
+              const khatmDuplicateExact = document.getElementById('khatm_duplicate_exact');
+              khatmDuplicateExact.addEventListener('click', (e) => {
                 e.preventDefault();
-                duplicate_khatm(storageKhatm.khatm);
+                swal({
+                  title: "Exact Duplicate?",
+                  text: "Duplicate this Khatm as it is?",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                .then((willUpdate) => {
+                  if (willUpdate) {
+                    // duplicate_khatm(storageKhatm.khatm);
+                    duplicate_khatm_exact();
+                  } else {
+                    swal("Khatm not duplicated!");
+                  }
+                });
+              });
+
+              const khatmDuplicateShift = document.getElementById('khatm_duplicate_shift');
+              khatmDuplicateShift.addEventListener('click', (e) => {
+                e.preventDefault();
+                swal({
+                  title: "Shift Duplicate?",
+                  text: "Duplicate this Khatm by shifting readers??",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                .then((willUpdate) => {
+                  if (willUpdate) {
+                    // duplicate_khatm(storageKhatm.khatm);
+                    duplicate_khatm_shift();
+                  } else {
+                    swal("Khatm not duplicated!");
+                  }
+                });
               });
             },
           );
@@ -1005,10 +1214,44 @@ if(storageKhatm) {
                       });
                       showKhatmDetails(khatmObj);
                       deleteKhatm(storageKhatm.mydateKhatm);
-                      const khatmDuplicate = document.getElementById('khatm_duplicate');
-                      khatmDuplicate.addEventListener('click', (e) => {
+                      const khatmDuplicateExact = document.getElementById('khatm_duplicate_exact');
+                      khatmDuplicateExact.addEventListener('click', (e) => {
                         e.preventDefault();
-                        duplicate_khatm(storageKhatm.khatm);
+                        swal({
+                          title: "Exact Duplicate?",
+                          text: "Duplicate this Khatm as it is?",
+                          icon: "warning",
+                          buttons: true,
+                          dangerMode: true,
+                        })
+                        .then((willUpdate) => {
+                          if (willUpdate) {
+                            // duplicate_khatm(storageKhatm.khatm);
+                            duplicate_khatm_exact();
+                          } else {
+                            swal("Khatm not duplicated!");
+                          }
+                        });
+                      });
+
+                      const khatmDuplicateShift = document.getElementById('khatm_duplicate_shift');
+                      khatmDuplicateShift.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        swal({
+                          title: "Shift Duplicate?",
+                          text: "Duplicate this Khatm by shifting readers??",
+                          icon: "warning",
+                          buttons: true,
+                          dangerMode: true,
+                        })
+                        .then((willUpdate) => {
+                          if (willUpdate) {
+                            // duplicate_khatm(storageKhatm.khatm);
+                            duplicate_khatm_shift();
+                          } else {
+                            swal("Khatm not duplicated!");
+                          }
+                        });
                       });
                     } else {
                       alert('Fail to update Khatm! Please try again...');
@@ -1018,10 +1261,44 @@ if(storageKhatm) {
               });
               showKhatmDetails(khatmObj);
               deleteKhatm(storageKhatm.mydateKhatm);
-              const khatmDuplicate = document.getElementById('khatm_duplicate');
-              khatmDuplicate.addEventListener('click', (e) => {
+              const khatmDuplicateExact = document.getElementById('khatm_duplicate_exact');
+              khatmDuplicateExact.addEventListener('click', (e) => {
                 e.preventDefault();
-                duplicate_khatm(storageKhatm.khatm);
+                swal({
+                  title: "Exact Duplicate?",
+                  text: "Duplicate this Khatm as it is?",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                .then((willUpdate) => {
+                  if (willUpdate) {
+                    // duplicate_khatm(storageKhatm.khatm);
+                    duplicate_khatm_exact();
+                  } else {
+                    swal("Khatm not duplicated!");
+                  }
+                });
+              });
+
+              const khatmDuplicateShift = document.getElementById('khatm_duplicate_shift');
+              khatmDuplicateShift.addEventListener('click', (e) => {
+                e.preventDefault();
+                swal({
+                  title: "Shift Duplicate?",
+                  text: "Duplicate this Khatm by shifting readers??",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                .then((willUpdate) => {
+                  if (willUpdate) {
+                    // duplicate_khatm(storageKhatm.khatm);
+                    duplicate_khatm_shift();
+                  } else {
+                    swal("Khatm not duplicated!");
+                  }
+                });
               });
             },
           );
