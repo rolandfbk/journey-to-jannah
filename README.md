@@ -35,7 +35,7 @@ Setup
 
 ## Live Demo
 
-[Live Demo Link](https://cheapprice.co.za/journey-to-jannah/)
+[Live Demo Link](http://journeytojannah.co.za/)
 
 
 ## Author
