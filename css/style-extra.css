@@ -1,0 +1,58 @@
+.small-menu {
+  display: flex;
+}
+
+.small-menu a {
+  flex: 1;
+}
+
+.menu-about {
+  text-align: center;
+  background-color: #B8860B;
+  color: #fff;
+}
+
+.menu-audio {
+  text-align: center;
+  background-color: #8B008B;
+  color: #fff;
+}
+
+.menu-contact {
+  text-align: center;
+  background-color: #6B8E23;
+  color: #fff;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  color: #000;
+}
+
+.modal-footer {
+  padding: 2px;
+  text-align: center;
+  background-color: #1E90FF;
+  color: white;
+}

@@ -135,9 +135,10 @@ const display_duroods_count = (mydateKhatm, remove) => {
               </div>
               <div class="duroods-list-details-date">${khatmObj[i].duroods_date} @ ${khatmObj[i].duroods_time}</div>
             </div>
+			<!--
             <div class="duroods-list-details-col2">
               <button class="duroods-remove-btn" id="${khatmObj[i].duroods_id}" onclick="deroodsremoveconfirm()" type="button"><i class="far fa-times-circle" style="font-size:25px;color:rgb(192, 18, 18)"></i></button>
-            </div>
+            </div> -->
           </div>
         `;
         div[i].innerHTML = template[i];
@@ -508,9 +509,10 @@ if(storageKhatm) {
                   </div>
                   <div class="duroods-list-details-date">${khatmObj[i].duroods_date} @ ${khatmObj[i].duroods_time}</div>
                 </div>
+				<!--
                 <div class="duroods-list-details-col2">
                   <button class="duroods-remove-btn" id="${khatmObj[i].duroods_id}" onclick="deroodsremoveconfirm(${khatmObj[i].duroods_id})" type="button"><i class="far fa-times-circle" style="font-size:25px;color:rgb(192, 18, 18)"></i></button>
-                </div>
+                </div> -->
               </div>
             `;
             div[i].innerHTML = template[i];

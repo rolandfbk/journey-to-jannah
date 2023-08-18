@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journey To Jannah</title>
+    <title>Journey To Jannah | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
     <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
     <link rel="stylesheet" href="css/magnific-popup.css"> 
     <link rel="stylesheet" href="css/templatemo-ocean-vibes.css"> 
+    <link rel="stylesheet" href="css/style-extra.css">
+
+    <style type="text/css">
+        /*
+           demo css
+        **********************/
+        .sampleWrapper { display: block; width: 100%; height: auto; margin: 0 auto; padding: 10px 0; }
+        .sampleWrapper .cjFancyTransition { position: relative; display: block; width: 100%; overflow: hidden;  }
+        .sampleWrapper .cjFancyTransition br { display: none; }
+    </style>
 <!--
     
 TemplateMo 554 Ocean Vibes
@@ -22,15 +32,40 @@ https://templatemo.com/tm-554-ocean-vibes
     </header>
 
     <!-- Video banner 400 px height -->
-    <div>
+    <div style="margin:-15px">
         <!-- <video autoplay loop id="tm-video">
             <source src="video/ocean-sea-wave-video.mp4" type="video/mp4">
         </video>  
         <i id="tm-video-control-button" class="fas fa-pause"></i> -->
-        <img src="img/home_banner.jpg" alt="Home banner" class="tm-mb-30">
+        <img src="img/bridge.jpg" alt="Home banner" style="width:100%">
+
+        <!-- <div class="sampleWrapper" class="clearfix">
+            <div id="sample2" class="cjFancyTransition">
+                <img src="img/waterfall.jpg" alt="slide_01" class="cj_image_scale_fill">
+                <img src="img/blossom.jpg" alt="slide_02" class="cj_image_scale_fill">
+                <img src="img/bridge.jpg" alt="slide_03" class="cj_image_scale_fill">
+                <img src="img/dolomites.jpg" alt="slide_01" class="cj_image_scale_fill">
+                <img src="img/pathway.jpg" alt="slide_02" class="cj_image_scale_fill">
+                <img src="img/river.jpg" alt="slide_03" class="cj_image_scale_fill">
+            </div>
+        </div> -->
+    </div>
+    <div class="small-menu">
+        <a href="index.html">
+            <div class="menu-about" >Home</div> 
+        </a>
+        <a href="about.html">
+            <div class="menu-contact" >About</div> 
+        </a>
+        <a href="audio.html">
+            <div class="menu-contact">Audio</div>
+        </a>
+        <a href="contact.html">
+            <div class="menu-contact">Contact</div>
+        </a>
     </div>
     <div class="tm-container">
-        <nav class="tm-main-nav">
+        <nav class="tm-main-nav" style="margin-top: 15px;">
             <ul id="inline-popupss">
                 <li class="tm-nav-item">
                     <a href="quraan.html" data-effect="mfp-move-from-top" class="tm-nav-link">
@@ -62,6 +97,7 @@ https://templatemo.com/tm-554-ocean-vibes
 </footer>
 
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.cj-flashy-slideshow.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>    
@@ -72,6 +108,16 @@ https://templatemo.com/tm-554-ocean-vibes
             var currentYear = new Date().getFullYear();
             $('#current-date').text(currentYear);
         });
-        </script>
+    </script>
+    <script>
+        (function($) {
+            "use strict";
+        
+            $('#sample2').cjFlashySlideShow({
+                preset: 'cubism'
+            });
+        
+        }(jQuery));
+    </script>
 </body>
 </html>

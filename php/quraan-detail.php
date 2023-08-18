@@ -4,11 +4,12 @@ require_once("../utility.php");
 
 $dataTime = $_GET['item_id'];
 
-$sql="select * from khatm where defaultid='$dataTime'"	;
+$sql="select * from khatm where defaultid='$dataTime'";
 $result = ExecuteQuery($sql);
 
 $row = mysqli_fetch_array($result);
 $allocated = [$row["alif_lam_meem_allocated"], $row["sayaqool_allocated"], $row["tilkal_rusull_allocated"], $row["lan_tana_loo_allocated"], $row["wal_mohsanat_allocated"], $row["la_yuhibbullah_allocated"], $row["wa_iza_samiu_allocated"], $row["wa_lau_annana_allocated"], $row["qalal_malao_allocated"], $row["wa_a_lamu_allocated"], $row["yatazeroon_allocated"], $row["wa_mamin_da_abat_allocated"], $row["wa_ma_ubrioo_allocated"], $row["rubama_allocated"], $row["subhanallazi_allocated"], $row["qal_alam_allocated"], $row["aqtarabo_allocated"], $row["qadd_aflaha_allocated"], $row["wa_qalallazina_allocated"], $row["a_man_khalaq_allocated"], $row["utlu_ma_oohi_allocated"], $row["wa_manyaqnut_allocated"], $row["wa_mali_allocated"], $row["faman_azlam_allocated"], $row["elahe_yuruddo_allocated"], $row["ha_a_meem_allocated"], $row["qala_fama_khatbukum_allocated"], $row["qadd_sami_allah_allocated"], $row["tabarakallazi_allocated"], $row["amma_yatasa_aloon_allocated"]];
+
 $read = [$row["alif_lam_meem_read"], $row["sayaqool_read"], $row["tilkal_rusull_read"], $row["lan_tana_loo_read"], $row["wal_mohsanat_read"], $row["la_yuhibbullah_read"], $row["wa_iza_samiu_read"], $row["wa_lau_annana_read"], $row["qalal_malao_read"], $row["wa_a_lamu_read"], $row["yatazeroon_read"], $row["wa_mamin_da_abat_read"], $row["wa_ma_ubrioo_read"], $row["rubama_read"], $row["subhanallazi_read"], $row["qal_alam_read"], $row["aqtarabo_read"], $row["qadd_aflaha_read"], $row["wa_qalallazina_read"], $row["a_man_khalaq_read"], $row["utlu_ma_oohi_read"], $row["wa_manyaqnut_read"], $row["wa_mali_read"], $row["faman_azlam_read"], $row["elahe_yuruddo_read"], $row["ha_a_meem_read"], $row["qala_fama_khatbukum_read"], $row["qadd_sami_allah_read"], $row["tabarakallazi_read"], $row["amma_yatasa_aloon_read"]];
 
 $allocated_count = 0;

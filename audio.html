@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey To Jannah | Audio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/magnific-popup.css"> 
+    <link rel="stylesheet" href="css/templatemo-ocean-vibes.css"> 
+    <link rel="stylesheet" href="css/style-extra.css">
+<!--
+    
+TemplateMo 554 Ocean Vibes
+
+https://templatemo.com/tm-554-ocean-vibes
+
+-->
+</head>
+<body>
+    <header class="tm-site-header">
+        <h1 class="tm-mt-0 tm-mb-15"><span class="tm-color-primary">Journey</span> <span class="tm-color-gray-3">to</span> <span class="tm-color-primary">Jannah</span></h1>
+    </header>
+
+    <!-- Video banner 400 px height -->
+    <div style="margin:-15px">
+        <!-- <video autoplay loop id="tm-video">
+            <source src="video/ocean-sea-wave-video.mp4" type="video/mp4">
+        </video>  
+        <i id="tm-video-control-button" class="fas fa-pause"></i> -->
+        <img src="img/river.jpg" alt="About banner" style="width:100%">
+    </div>
+    <div class="small-menu">
+        <a href="index.html">
+            <div class="menu-contact" >Home</div> 
+        </a>
+        <a href="about.html">
+            <div class="menu-contact" >About</div> 
+        </a>
+        <a href="audio.html">
+            <div class="menu-about">Audio</div>
+        </a>
+        <a href="contact.html">
+            <div class="menu-contact">Contact</div>
+        </a>
+    </div>
+    <div class="tm-container">
+        <h2 style="text-align: center; margin-top: 15px;">Listen To Songs</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Suspendisse luctus quam molestie</span>
+            <i class="fa fa-play-circle" id="audioplay1" style="font-size:24px; color:#8FBC8F; margin-left: 5px;"></i>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+            <span>Suspendisse luctus quam molestie</span>
+            <i class="fa fa-play-circle" id="audioplay2" style="font-size:24px; color:#8FBC8F; margin-left: 5px;"></i>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+            <span>Suspendisse luctus quam molestie</span>
+            <i class="fa fa-play-circle" id="audioplay3" style="font-size:24px; color:#8FBC8F; margin-left: 5px;"></i>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+            <span>Suspendisse luctus quam molestie</span>
+            <i class="fa fa-play-circle" id="audioplay4" style="font-size:24px; color:#8FBC8F; margin-left: 5px;"></i>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+            <span>Suspendisse luctus quam molestie</span>
+            <i class="fa fa-play-circle" id="audioplay5" style="font-size:24px; color:#8FBC8F; margin-left: 5px;"></i>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" id="close-modal">&times;</span>
+                    <h2 id="modaltitle">Jour</h2>
+                </div>
+                <div class="modal-body" style="padding-top: 10px;">
+                    <p id="modaltext">Some text in the Modal Body</p>
+                    <div id="modalaudio"></div>
+                </div>
+                <div class="modal-footer">
+                    <h3>Journey to Jannah</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="tm-footer">
+        <span>Copyright &copy; <span id="current-date"></span> Destination Jannah</span>
+        <span>A special gift to Sharifa</span>
+        <span>Web Designed by <a href="https://rolandoy.com" target="_blank">Roland</a></span>
+
+</footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>    
+    <script src="js/templatemo-script.js"></script>
+    
+    <script src="js/audioplay.js"></script>
+    
+    <script>
+        $(function(){
+            var currentYear = new Date().getFullYear();
+            $('#current-date').text(currentYear);
+        });
+    </script>
+</body>
+</html>
